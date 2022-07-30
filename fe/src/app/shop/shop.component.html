@@ -1,0 +1,28 @@
+<div class="row">
+    <form class="col l8 offset-l2">
+      <div class="row">
+        <div class="input-field col l12">
+          <input id="search_product" type="search" class="validate">
+          <label for="search">Search</label>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="col l4" *ngFor="let item of shopItems;let i=index">
+        <div class="card purple darken-4 crd">
+            <div class="card-content white-text">
+                <span class="card-title">{{item['name']}}</span>
+                <p>- {{item['disocuntPercentage']}}% off</p>
+                <s>
+                    <h5>&#8377;{{item['mrp']}}</h5>
+                </s>
+                <h4>&#8377; {{item['discountedSellingPrice']}}</h4>
+            </div>
+            <div class="card-action">
+                <button class="btn btn-rounded indigo darken-4 white-text waves-effect">Add to cart</button>
+            </div>
+        </div>
+    </div>
+                
+  </div>

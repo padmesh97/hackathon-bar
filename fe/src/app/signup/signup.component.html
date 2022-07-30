@@ -1,0 +1,43 @@
+<div class="row">
+    <form
+      [formGroup]="signupForm"
+      (ngSubmit)="onSubmit()"
+      class="col l8 grey lighten-4 offset-l1"
+      style="padding: 5rem; margin-top: 9rem"
+    >
+
+      <div class="input-field col s12">
+        <select formControlName="type">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="customer">Customer</option>
+          <option value="store">Store manager</option>
+        </select>
+        <label>Choose type</label>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col l12">
+          <input id="name" type="text" formControlName="name" required/>
+          <label for="name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l12">
+          <input id="email" type="email" formControlName="email" required />
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l12">
+          <input id="password" type="password" formControlName="password" required />
+          <label for="password">Password</label>
+        </div>
+      </div>
+  
+      <div class="row centered">
+        <button class="btn" type="submit">Signup</button>
+      </div>
+
+    </form>
+  </div>
+  
